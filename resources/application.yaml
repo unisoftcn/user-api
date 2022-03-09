@@ -1,0 +1,12 @@
+http:
+  port: 6080
+  mode: debug
+zap:
+  encoding: console
+database:
+  debug: true
+  type: postgres
+  dsn: host=192.168.137.100 user=postgres password=1111aaaa dbname=park_user port=5432 sslmode=disable TimeZone=Asia/Shanghai
+redis:
+  host: 192.168.137.100
+  port: 6379
