@@ -1,6 +1,6 @@
 package dto
 
-import "github.com/vuuvv/user-api/entity"
+import "github.com/unisoftcn/user-api/entity"
 
 type ThirdPartyAccount struct {
 	entity.ThirdPartyAccount

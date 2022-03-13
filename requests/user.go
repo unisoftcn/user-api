@@ -2,7 +2,7 @@ package requests
 
 import (
 	"github.com/vuuvv/orca/request"
-	"github.com/vuuvv/user-api/dto"
+	"github.com/unisoftcn/user-api/dto"
 	"strconv"
 )
 

@@ -1,4 +1,4 @@
-module github.com/vuuvv/user-api
+module github.com/unisoftcn/user-api
 
 go 1.17
 

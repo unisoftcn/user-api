@@ -1,7 +1,7 @@
 package dto
 
 import (
-	"github.com/vuuvv/user-api/entity"
+	"github.com/unisoftcn/user-api/entity"
 	"time"
 )
 

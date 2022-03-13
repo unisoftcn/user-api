@@ -2,7 +2,7 @@ package dto
 
 import (
 	"github.com/vuuvv/orca/orm"
-	"github.com/vuuvv/user-api/entity"
+	"github.com/unisoftcn/user-api/entity"
 	"strings"
 )
 

@@ -1,8 +1,8 @@
 package dto
 
 import (
-	"github.com/vuuvv/user-api/entity"
-	"github.com/vuuvv/user-api/model"
+	"github.com/unisoftcn/user-api/entity"
+	"github.com/unisoftcn/user-api/model"
 )
 
 type WxInfo struct {

@@ -3,7 +3,7 @@ package forms
 import (
 	"github.com/vuuvv/errors"
 	"github.com/vuuvv/orca/orm"
-	"github.com/vuuvv/user-api/entity"
+	"github.com/unisoftcn/user-api/entity"
 )
 
 type OrgUser struct {

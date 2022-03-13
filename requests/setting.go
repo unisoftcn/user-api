@@ -4,7 +4,7 @@ import (
 	jsoniter "github.com/json-iterator/go"
 	"github.com/vuuvv/errors"
 	"github.com/vuuvv/orca/request"
-	"github.com/vuuvv/user-api/entity"
+	"github.com/unisoftcn/user-api/entity"
 )
 
 type settingService struct {

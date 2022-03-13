@@ -1,6 +1,6 @@
 package forms
 
-import "github.com/vuuvv/user-api/entity"
+import "github.com/unisoftcn/user-api/entity"
 
 type SetRoleRoutes struct {
 	AddList []*entity.RoleRoute
