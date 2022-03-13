@@ -1,6 +1,7 @@
 package entity
 
 import (
+	"fmt"
 	"github.com/vuuvv/orca/orm"
 )
 
@@ -9,7 +10,7 @@ type Route struct {
 	Group      string `json:"group" gorm:"comment:组名"`
 	Name       string `json:"name" gorm:"comment:名称"`
 	Type       int    `json:"type" gorm:"default:1;comment:类型,固定为1,反代模式"`
-	Schema     string `json:"schema" gorm:"default:http;comment:http 或 https"`
+	Schema     string `json:"schema" gorm:"comment:http 或 https"`
 	Host       string `json:"host" gorm:"comment:入站主机名称"`
 	Method     string `json:"method" gorm:"comment:http method"`
 	Path       string `json:"path" gorm:"comment:路径"`
@@ -27,4 +28,8 @@ func (*Route) TableName() string {
 
 func (*Route) TableTitle() string {
 	return "路由"
+}
+
+func (this *Route) Key() string {
+	return fmt.Sprintf("%s:%s:%s:%s", this.Schema, this.Host, this.Method, this.Path)
 }
