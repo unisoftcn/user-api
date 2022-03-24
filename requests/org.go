@@ -1,13 +1,12 @@
 package requests
 
 import (
-	"github.com/vuuvv/errors"
-	"github.com/vuuvv/orca/request"
-	"github.com/vuuvv/orca/serialize"
-	"github.com/vuuvv/orca/utils"
 	"github.com/unisoftcn/user-api/dto"
 	"github.com/unisoftcn/user-api/entity"
 	"github.com/unisoftcn/user-api/forms"
+	"github.com/vuuvv/errors"
+	"github.com/vuuvv/orca/request"
+	"github.com/vuuvv/orca/serialize"
 	"strconv"
 )
 
@@ -22,12 +21,6 @@ func (s *orgRequest) GetByPath(path string) (org *entity.Org, err error) {
 	return
 }
 
-func (s *orgRequest) GetByPathC(path string) *entity.Org {
-	org, err := s.GetByPath(path)
-	utils.PanicIf(err)
-	return org
-}
-
 func (s *orgRequest) GetById(id int64) (org *entity.Org, err error) {
 	org = &entity.Org{}
 	_, err = request.Get(
@@ -36,14 +29,6 @@ func (s *orgRequest) GetById(id int64) (org *entity.Org, err error) {
 		org,
 	)
 	return org, err
-}
-
-func (s *orgRequest) GetByIdC(id int64) *entity.Org {
-	org, err := s.GetById(id)
-	if err != nil {
-		panic(err)
-	}
-	return org
 }
 
 func (s *orgRequest) FindByOrgPaths(orgPath []string) (org []*entity.Org, err error) {

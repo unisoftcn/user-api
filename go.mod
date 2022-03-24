@@ -1,8 +1,8 @@
 module github.com/unisoftcn/user-api
 
-go 1.17
+go 1.18
 
-//replace github.com/vuuvv/orca => E:\repo\go\orca
+replace github.com/vuuvv/orca => E:\repo\go\orca
 
 require (
 	github.com/json-iterator/go v1.1.12

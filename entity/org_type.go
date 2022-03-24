@@ -3,9 +3,11 @@ package entity
 import "github.com/vuuvv/orca/orm"
 
 const (
-	OrgTypeHeadquarter = "headquarter"
-	OrgTypeAgent = "agent"
 	OrgTypeSystem = "system"
+	OrgTypeHeadquarter = "headquarter"
+	OrgTypePrimaryFranchisee = "primary_franchisee"
+	OrgTypeSecondaryFranchisee = "secondary_franchisee"
+	OrgTypeEstate = "estate"
 	OrgTypePark = "park"
 )
 

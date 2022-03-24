@@ -1,11 +1,18 @@
 package vuser
 
+import (
+	"github.com/gin-gonic/gin"
+	"github.com/vuuvv/errors"
+	"github.com/vuuvv/orca/server"
+	"github.com/vuuvv/orca/utils"
+)
+
 const (
-	//SessionKeyTrdUserId     = "/vuser/session/key/third_party_user_id"
-	//SessionKeyWxRedirectUrl = "/vuser/session/key/redirect_url"
-	//SessionKeyWxLoginToken  = "/vuser/session/key/wx_login_token"
-	//SessionKeyCaptcha       = "/vuser/session/key/captcha"
-	//SessionKeyLogin         = "/vuser/session/key/login"
+//SessionKeyTrdUserId     = "/vuser/session/key/third_party_user_id"
+//SessionKeyWxRedirectUrl = "/vuser/session/key/redirect_url"
+//SessionKeyWxLoginToken  = "/vuser/session/key/wx_login_token"
+//SessionKeyCaptcha       = "/vuser/session/key/captcha"
+//SessionKeyLogin         = "/vuser/session/key/login"
 )
 
 type WechatLoginInfo struct {
@@ -15,17 +22,16 @@ type WechatLoginInfo struct {
 	OrgPath   string `json:"orgPath"`
 }
 
-//func CheckWechatLogin(ctx *gin.Context) (ret *WechatLoginInfo, err error) {
-//	ret = &WechatLoginInfo{}
-//	err = sessions.GetSession(ctx, SessionKeyTrdUserId, &ret)
-//	if utils.RecordNotFound(err) {
-//		return nil, errors.New("请从微信客户端登录")
-//	}
-//	if err != nil {
-//		return nil, errors.WithStack(err)
-//	}
-//	return ret, nil
-//}
+func CheckWechatLogin(ctx *gin.Context) (ret *WechatLoginInfo, err error) {
+	ret, err = server.GetSessionP[WechatLoginInfo](ctx, CookieTrdUserId)
+	//ret = &WechatLoginInfo{}
+	//err = sessions.GetSession(ctx, SessionKeyTrdUserId, &ret)
+	if utils.RecordNotFound(err) {
+		return nil, errors.New("请从微信客户端登录")
+	}
+	return ret, errors.WithStack(err)
+}
+
 //
 //func GetLoginUser(ctx *gin.Context) (user *server.AccessToken, err error) {
 //	user = &server.AccessToken{}

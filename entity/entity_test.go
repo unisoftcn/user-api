@@ -13,7 +13,7 @@ import (
 )
 
 func getDb(t *testing.T) *gorm.DB {
-	loader := config.MustLoad("../resources/application.yaml")
+	loader := config.MustLoad("../../user/resources/application.yaml")
 	ormConfig := &orm.Config{}
 	err := loader.Unmarshal(ormConfig, "database")
 	_, _ = id.NewGenerator()
