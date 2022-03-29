@@ -2,8 +2,8 @@ package requests
 
 import (
 	"github.com/vuuvv/errors"
-	"github.com/vuuvv/orca/request"
-	"github.com/unisoftcn/user-api/forms"
+	"vuuvv.cn/unisoftcn/orca/request"
+	"vuuvv.cn/unisoftcn/user-api/forms"
 )
 
 type siteService struct {

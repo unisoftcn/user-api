@@ -1,6 +1,6 @@
 package forms
 
-import "github.com/vuuvv/orca/orm"
+import "vuuvv.cn/unisoftcn/orca/orm"
 
 type Qrcode struct {
 	orm.Id

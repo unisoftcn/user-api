@@ -1,6 +1,6 @@
 package entity
 
-import "github.com/vuuvv/orca/orm"
+import "vuuvv.cn/unisoftcn/orca/orm"
 
 type Menu struct {
 	orm.Tree

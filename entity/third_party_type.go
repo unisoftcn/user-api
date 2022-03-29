@@ -1,6 +1,6 @@
 package entity
 
-import "github.com/vuuvv/orca/orm"
+import "vuuvv.cn/unisoftcn/orca/orm"
 
 // ThirdPartyType 第三方平台
 type ThirdPartyType struct {

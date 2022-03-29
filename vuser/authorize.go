@@ -3,8 +3,8 @@ package vuser
 import (
 	"github.com/gin-gonic/gin"
 	"github.com/vuuvv/errors"
-	"github.com/vuuvv/orca/server"
-	"github.com/vuuvv/orca/utils"
+	"vuuvv.cn/unisoftcn/orca/server"
+	"vuuvv.cn/unisoftcn/orca/utils"
 )
 
 const (
@@ -17,7 +17,9 @@ const (
 
 type WechatLoginInfo struct {
 	TrdUserId int64  `json:"trdUserId"`
+	UserId    int64  `json:"userId"`
 	Nickname  string `json:"nickname"`
+	OrgId     int64  `json:"orgId"`
 	AppId     string `json:"appId"`
 	OrgPath   string `json:"orgPath"`
 }

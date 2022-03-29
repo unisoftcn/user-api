@@ -3,34 +3,34 @@ package model
 import (
 	"fmt"
 	"github.com/vuuvv/errors"
-	"github.com/vuuvv/orca/orm"
-	"github.com/vuuvv/orca/utils"
+	"vuuvv.cn/unisoftcn/orca/orm"
+	"vuuvv.cn/unisoftcn/orca/utils"
 
 	url2 "net/url"
 )
 
 type WxAccount struct {
 	orm.Id
-	Name           string     `json:"name"`
-	OrgPath        string     `json:"orgPath"`
-	Type           string     `json:"type"`
-	AppId          string     `json:"appId"`
-	AppSecret      string     `json:"appSecret"`
-	Token          string     `json:"token"`
-	EncodingAESKey string     `json:"encodingAesKey"`
-	OauthAddress   string     `json:"oauthAddress"`
-	ClientAddress  string     `json:"clientAddress"`
-	Custom         bool       `json:"custom"`
+	Name           string            `json:"name"`
+	OrgPath        string            `json:"orgPath"`
+	Type           string            `json:"type"`
+	AppId          string            `json:"appId"`
+	AppSecret      string            `json:"appSecret"`
+	Token          string            `json:"token"`
+	EncodingAESKey string            `json:"encodingAesKey"`
+	OauthAddress   string            `json:"oauthAddress"`
+	ClientAddress  string            `json:"clientAddress"`
+	Custom         bool              `json:"custom"`
 	Template       map[string]string `json:"template"`
 	Site           *Site
 }
 
-func (a *WxAccount) GetOauthUrl() (string, error) {
+func (a *WxAccount) GetOauthUrl(orgId int64) (string, error) {
 	url, err := a.Site.Url()
 	if err != nil {
 		return "", err
 	}
-	return utils.UrlJoin(url, a.OauthAddress, fmt.Sprintf("/oauth?app=%s", a.AppId))
+	return utils.UrlJoin(url, a.OauthAddress, fmt.Sprintf("/oauth?app=%d", orgId))
 }
 
 // GetEntryUrl 获取微信入口Url

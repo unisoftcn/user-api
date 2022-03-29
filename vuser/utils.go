@@ -13,12 +13,12 @@ func Ancestors(path string) []string {
 
 	parts := strings.Split(path, ":")
 	if len(parts) <= 1 {
-		return []string{"", path}
+		return []string{path}
 	}
 
 	var ret []string
 	cur := ""
-	ret = append(ret, cur)
+	//ret = append(ret, cur)
 
 	for _, v := range parts {
 		if cur == "" {

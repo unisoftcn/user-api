@@ -1,6 +1,6 @@
 package forms
 
-import "github.com/unisoftcn/user-api/entity"
+import "vuuvv.cn/unisoftcn/user-api/entity"
 
 type SetRoleMenus struct {
 	AddList []*entity.RoleMenu

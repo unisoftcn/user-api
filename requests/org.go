@@ -1,13 +1,13 @@
 package requests
 
 import (
-	"github.com/unisoftcn/user-api/dto"
-	"github.com/unisoftcn/user-api/entity"
-	"github.com/unisoftcn/user-api/forms"
 	"github.com/vuuvv/errors"
-	"github.com/vuuvv/orca/request"
-	"github.com/vuuvv/orca/serialize"
 	"strconv"
+	"vuuvv.cn/unisoftcn/orca/request"
+	"vuuvv.cn/unisoftcn/orca/serialize"
+	"vuuvv.cn/unisoftcn/user-api/dto"
+	"vuuvv.cn/unisoftcn/user-api/entity"
+	"vuuvv.cn/unisoftcn/user-api/forms"
 )
 
 type orgRequest struct {

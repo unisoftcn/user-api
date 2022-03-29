@@ -2,7 +2,7 @@ package entity
 
 import (
 	"fmt"
-	"github.com/vuuvv/orca/orm"
+	"vuuvv.cn/unisoftcn/orca/orm"
 )
 
 type Route struct {

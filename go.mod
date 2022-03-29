@@ -1,17 +1,17 @@
-module github.com/unisoftcn/user-api
+module vuuvv.cn/unisoftcn/user-api
 
 go 1.18
 
-replace github.com/vuuvv/orca => E:\repo\go\orca
+//replace vuuvv.cn/unisoftcn/orca => E:\repo\go\orca
 
 require (
+	github.com/gin-gonic/gin v1.7.7
 	github.com/json-iterator/go v1.1.12
 	github.com/stretchr/testify v1.7.0
 	github.com/vuuvv/errors v0.9.5
-	github.com/vuuvv/orca v0.0.16
 	go.uber.org/zap v1.17.0
-	gorm.io/datatypes v1.0.6
 	gorm.io/gorm v1.23.2
+	vuuvv.cn/unisoftcn/orca v0.0.20
 )
 
 require (
@@ -23,7 +23,6 @@ require (
 	github.com/fatih/structs v1.1.0 // indirect
 	github.com/fsnotify/fsnotify v1.5.1 // indirect
 	github.com/gin-contrib/sse v0.1.0 // indirect
-	github.com/gin-gonic/gin v1.7.7 // indirect
 	github.com/go-playground/locales v0.13.0 // indirect
 	github.com/go-playground/universal-translator v0.17.0 // indirect
 	github.com/go-playground/validator/v10 v10.5.0 // indirect
@@ -50,6 +49,7 @@ require (
 	github.com/leodido/go-urn v1.2.1 // indirect
 	github.com/magiconair/properties v1.8.5 // indirect
 	github.com/mattn/go-isatty v0.0.14 // indirect
+	github.com/meehow/securebytes v0.3.1 // indirect
 	github.com/modern-go/concurrent v0.0.0-20180306012644-bacd9c7ef1dd // indirect
 	github.com/modern-go/reflect2 v1.0.2 // indirect
 	github.com/pelletier/go-toml v1.9.4 // indirect

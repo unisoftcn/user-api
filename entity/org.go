@@ -1,8 +1,8 @@
 package entity
 
 import (
-	"github.com/vuuvv/orca/orm"
-	"gorm.io/datatypes"
+	"vuuvv.cn/unisoftcn/orca/orm"
+	"vuuvv.cn/unisoftcn/orca/orm/datatypes"
 )
 
 type Org struct {

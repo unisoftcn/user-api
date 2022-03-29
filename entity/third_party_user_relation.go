@@ -1,10 +1,10 @@
 package entity
 
-import "github.com/vuuvv/orca/orm"
+import "vuuvv.cn/unisoftcn/orca/orm"
 
 type ThirdPartyUserRelation struct {
 	orm.Id
-	UserId int64 `json:"userId" gorm:"comment:用户Id"`
+	UserId    int64 `json:"userId" gorm:"comment:用户Id"`
 	TrdUserId int64 `json:"trdUserId" gorm:"comment:第三方用户Id"`
 	orm.Entity
 }

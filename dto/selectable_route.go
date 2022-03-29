@@ -1,6 +1,6 @@
 package dto
 
-import "github.com/unisoftcn/user-api/entity"
+import "vuuvv.cn/unisoftcn/user-api/entity"
 
 type SelectableRoute struct {
 	Routes   []*entity.Route `json:"routes"`

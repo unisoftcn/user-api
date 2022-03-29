@@ -1,8 +1,8 @@
 package dto
 
 import (
-	"github.com/unisoftcn/user-api/entity"
 	"time"
+	"vuuvv.cn/unisoftcn/user-api/entity"
 )
 
 type Org struct {

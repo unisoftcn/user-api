@@ -1,8 +1,8 @@
 package vuser
 
 import (
-	"github.com/vuuvv/orca/server"
 	"strings"
+	"vuuvv.cn/unisoftcn/orca/server"
 )
 
 func InAncestorOrg(token *server.AccessToken, orgPath string) bool {

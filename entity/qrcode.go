@@ -1,8 +1,8 @@
 package entity
 
 import (
-	"github.com/vuuvv/orca/orm"
 	"time"
+	"vuuvv.cn/unisoftcn/orca/orm"
 )
 
 // Qrcode 二维码

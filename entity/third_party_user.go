@@ -1,6 +1,6 @@
 package entity
 
-import "github.com/vuuvv/orca/orm"
+import "vuuvv.cn/unisoftcn/orca/orm"
 
 type ThirdPartyUser struct {
 	orm.Id
@@ -15,6 +15,7 @@ type ThirdPartyUser struct {
 	orm.Entity
 
 	OrgPath string `json:"orgPath" gorm:"-"`
+	OrgId   int64  `json:"orgId" gorm:"-"`
 }
 
 func (*ThirdPartyUser) TableName() string {

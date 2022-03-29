@@ -1,14 +1,14 @@
 package entity
 
-import "github.com/vuuvv/orca/orm"
+import "vuuvv.cn/unisoftcn/orca/orm"
 
 const (
-	OrgTypeSystem = "system"
-	OrgTypeHeadquarter = "headquarter"
-	OrgTypePrimaryFranchisee = "primary_franchisee"
+	OrgTypeSystem              = "system"
+	OrgTypeHeadquarter         = "headquarter"
+	OrgTypePrimaryFranchisee   = "primary_franchisee"
 	OrgTypeSecondaryFranchisee = "secondary_franchisee"
-	OrgTypeEstate = "estate"
-	OrgTypePark = "park"
+	OrgTypeEstate              = "estate"
+	OrgTypePark                = "park"
 )
 
 type OrgType struct {

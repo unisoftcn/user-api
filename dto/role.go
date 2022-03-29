@@ -1,8 +1,8 @@
 package dto
 
 import (
-	"github.com/vuuvv/orca/orm"
-	"github.com/unisoftcn/user-api/entity"
+	"vuuvv.cn/unisoftcn/orca/orm"
+	"vuuvv.cn/unisoftcn/user-api/entity"
 )
 
 type Role struct {

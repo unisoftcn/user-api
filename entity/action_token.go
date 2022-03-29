@@ -1,17 +1,17 @@
 package entity
 
 import (
-	"github.com/vuuvv/orca/orm"
-	
+	"vuuvv.cn/unisoftcn/orca/orm"
+
 	"time"
 )
 
 const (
-	ActionTokenTypeWxLogin  = "wx_login"
-	ActionTokenStatusUnused = "unused" // 未使用
-	ActionTokenStatusScan   = "scan"   // 用户扫描完成，等待下一步动作，例如选择账户
-	ActionTokenStatusActive = "active" // 用户动作已完成，等待系统验证
-	ActionTokenStatusDone   = "done"   // 已经结束，不可再使用
+	ActionTokenTypeWxLogin   = "wx_login"
+	ActionTokenStatusUnused  = "unused"  // 未使用
+	ActionTokenStatusScan    = "scan"    // 用户扫描完成，等待下一步动作，例如选择账户
+	ActionTokenStatusActive  = "active"  // 用户动作已完成，等待系统验证
+	ActionTokenStatusDone    = "done"    // 已经结束，不可再使用
 	ActionTokenStatusExpired = "expired" // 已超时
 )
 
@@ -36,4 +36,3 @@ func (*ActionToken) TableName() string {
 func (*ActionToken) TableTitle() string {
 	return "令牌"
 }
-

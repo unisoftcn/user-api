@@ -1,6 +1,6 @@
 package entity
 
-import "github.com/vuuvv/orca/orm"
+import "vuuvv.cn/unisoftcn/orca/orm"
 
 type User struct {
 	orm.Id
@@ -12,12 +12,12 @@ type User struct {
 	Phone     string `json:"phone" gorm:"comment:手机号码"`
 	Email     string `json:"email" gorm:"comment:电子邮箱"`
 	Avatar    string `json:"avatar" gorm:"comment:用户头像"`
-	IsSuper   bool   `json:"isSuper"`                                       // IsSuper 是否超级管理员
-	OrgId     int64  `json:"orgId"`                                         // OrgId 默认机构
-	OrgPath   string `json:"orgPath"`                                       // OrgPath 默认机构Path
-	OrgUserId int64  `json:"orgUserId"`                                     // OrgUserId 机构用户Id, 冗余字段
+	IsSuper   bool   `json:"isSuper"`                               // IsSuper 是否超级管理员
+	OrgId     int64  `json:"orgId"`                                 // OrgId 默认机构
+	OrgPath   string `json:"orgPath"`                               // OrgPath 默认机构Path
+	OrgUserId int64  `json:"orgUserId"`                             // OrgUserId 机构用户Id, 冗余字段
 	Status    string `json:"status" gorm:"default:ok;comment:用户状态"` // Status 用户状态
-	Logins    string `json:"logins" gorm:"comment:可登录方式"`                   // Logins 可登录方式
+	Logins    string `json:"logins" gorm:"comment:可登录方式"`           // Logins 可登录方式
 	orm.Entity
 }
 

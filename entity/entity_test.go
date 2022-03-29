@@ -3,13 +3,13 @@ package entity
 import (
 	"fmt"
 	"github.com/vuuvv/errors"
-	"github.com/vuuvv/orca/config"
-	"github.com/vuuvv/orca/id"
-	"github.com/vuuvv/orca/orm"
-	"github.com/vuuvv/orca/serialize"
 	"gorm.io/gorm"
 	"io/ioutil"
 	"testing"
+	"vuuvv.cn/unisoftcn/orca/config"
+	"vuuvv.cn/unisoftcn/orca/id"
+	"vuuvv.cn/unisoftcn/orca/orm"
+	"vuuvv.cn/unisoftcn/orca/serialize"
 )
 
 func getDb(t *testing.T) *gorm.DB {
@@ -118,8 +118,7 @@ func createAreas(db *gorm.DB, filename string, typ string, parentCode func(form 
 	if err != nil {
 		return errors.WithStack(err)
 	}
-	var areaList []*areaForm
-	err = serialize.JsonParseBytes(body, &areaList)
+	areaList, err := serialize.JsonParseBytesPrimitive[[]*areaForm](body)
 	if err != nil {
 		return errors.WithStack(err)
 	}

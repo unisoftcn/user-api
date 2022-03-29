@@ -1,6 +1,21 @@
 package entity
 
-import "github.com/vuuvv/orca/orm"
+import "vuuvv.cn/unisoftcn/orca/orm"
+
+const (
+	// RoleSystemManager 系统管理员
+	RoleSystemManager = "system_manager"
+	// RoleHeadquarterManager 平台管理员
+	RoleHeadquarterManager = "headquarter_manager"
+	// RoleHeadquarterMember 普通用户
+	RoleHeadquarterMember = "headquarter_member"
+	// RolePrimaryFranchiseeManager 一级加盟商管理员
+	RolePrimaryFranchiseeManager = "primary_franchisee_manager"
+	// RoleSecondaryFranchiseeManager 二级加盟商管理员
+	RoleSecondaryFranchiseeManager = "secondary_franchisee_manager"
+	// RoleEstateManager 园区管理员
+	RoleEstateManager = "estate_manager"
+)
 
 type Role struct {
 	orm.Id
